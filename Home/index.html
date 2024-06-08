@@ -3,11 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Bookly Records</title>
+    <link rel="stylesheet" href="bookly.css">
 </head>
-<body>
+
+    <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
     
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the bottom of the document
+    function bottomFunction() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+    function go_add()
+    {
+        location.replace("add_books.html");
+    }
+    function go_lib()
+    {
+        location.replace("library.html");
+    }
+    </script>
+
+<body>
+    <div class="img1">
+        <img src="Background__IMG.png" alt="">
+    </div>
+        <div id="get_started">
+            <button onclick="bottomFunction()" id="myBtn" title="Go to bottom">GET STARTED</button>
+        </div>
+    <div class="navbar">
+        <a href="#" class="title">Bookly</a>
+        <a href="#" class="circle"></a>
+    </div>
+
+    <div class="B_ADD">
+        <button class="b1" id="VL" onclick="go_lib()">VIEW LIBRARY</button>
+        <button class="b3"></button>
+        <button class="b2" id="AB"onclick="go_add()">ADD BOOKS</button>
+    </div>
+
 </body>
-<script src="index.js"></script>
 </html>
